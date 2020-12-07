@@ -8,6 +8,7 @@ export const OWL_MOMENT_DATE_TIME_FORMATS: OwlDateTimeFormats = {
     fullPickerInput: 'l LT',
     datePickerInput: 'l',
     timePickerInput: 'LT',
+    yearPickerInput: 'l',
     monthYearLabel: 'MMM YYYY',
     dateA11yLabel: 'LL',
     monthYearA11yLabel: 'MMMM YYYY',
