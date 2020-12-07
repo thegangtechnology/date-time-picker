@@ -187,11 +187,17 @@ export abstract class OwlDateTime<T> {
     abstract selectMonth(normalizedMonth: T): void;
 
     get formatString(): string {
-        return this.pickerType === 'both'
-            ? this.dateTimeFormats.fullPickerInput
-            : this.pickerType === 'calendar'
-                ? this.dateTimeFormats.datePickerInput
-                : this.dateTimeFormats.timePickerInput;
+        if (this.pickerType === 'both') {
+            return this.dateTimeFormats.fullPickerInput;
+        } else if (this.pickerType === 'calendar') {
+            if (this.startView === 'year') {
+                return this.dateTimeFormats.yearPickerInput;
+            }
+
+            return this.dateTimeFormats.datePickerInput;
+        } else {
+            return this.dateTimeFormats.timePickerInput;
+        }
     }
 
     /**

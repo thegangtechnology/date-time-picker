@@ -9,6 +9,7 @@ export interface OwlDateTimeFormats {
     fullPickerInput: any;
     datePickerInput: any;
     timePickerInput: any;
+    yearPickerInput: any;
     monthYearLabel: any;
     dateA11yLabel: any;
     monthYearA11yLabel: any;

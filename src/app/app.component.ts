@@ -19,11 +19,16 @@ export class AppComponent implements AfterViewInit {
   ];
 
 
-  currentValue: Date = new Date('4/21/2020, 12:00 AM');
+  dateTime: Date = new Date('4/21/2020, 12:00 AM');
   endValue: Date = new Date('4/21/2020, 11:59 PM');
 
   open_once = false;
 
   ngAfterViewInit() {
   }
+
+    public startMonthHandler(normalizedYear: Date, datepicker: OwlDateTimeComponent<any>) {
+        this.dateTime = normalizedYear;
+        datepicker.close();
+    }
 }

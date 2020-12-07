@@ -1,6 +1,6 @@
 <label for="daterange">Datetime range (click, then press 'Set' to modify):</label>
-<input [(ngModel)]="selectedMoments" [selectMode]="'range'"
+<input [(ngModel)]="dateTime"
        [owlDateTimeTrigger]="date_range_component" [owlDateTime]="date_range_component"
        style="width: 100%; color: cornflowerblue"
        id="daterange" matInput required>
-<owl-date-time #date_range_component [startAt]="currentValue" [endAt]="endValue"></owl-date-time>
+<owl-date-time #date_range_component [startView]="'year'" (monthSelected)="startMonthHandler($event, date_range_component)" [yearOnly]="true" [pickerType]="'calendar'"></owl-date-time>
