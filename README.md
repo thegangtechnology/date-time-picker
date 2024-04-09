@@ -6,6 +6,10 @@ Angular Date Time Picker
 
 **Angular date time picker - Angular reusable UI component**
 **This package supports Angular 9+ / Angular 10**
+## TO DOWNLOAD FROM THE GANG NPM REGISTRY
+- Get Access Token with at least `read:packages` permission
+- Authenticate: `npm login --scope=registry --auth-type=legacy --registry=https://npm.pkg.github.com`
+- Download targz: `npm pack @thegangtechnology/angular-datetime-picker`
 
 Breaking Changes
 -------
